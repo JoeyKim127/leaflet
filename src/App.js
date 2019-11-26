@@ -1,26 +1,36 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './components/Navbar';
+import Navbar from './components/layouts/Navbar';
+
+import TotalPoints from './components/layouts/TotalPoints';
+import CurrentLocation from './components/layouts/CurrentLocation';
+import AdList from './components/layouts/AdList';
 
 class App extends Component {
   render() {
     return (
+
+      <div className="container">
+
      
-      <div>
-         <Navbar />
-        
+      
+        <div className="header">
+          <TotalPoints />
+        </div>
+        <div className="body">
+          <CurrentLocation />
+          <AdList />
+        </div>
+
+         <div className="nav">
+          <Navbar />
+      </div>
+      
       </div>
     )
   };
 };
-
-
-// function App() {
-//   return (
-//   <h2>hello points</h2>
-//   );
-// }
 
 export default App;
