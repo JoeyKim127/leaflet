@@ -4,10 +4,6 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/layouts/Navbar';
 
-import TotalPoints from './components/layouts/TotalPoints';
-import CurrentLocation from './components/layouts/CurrentLocation';
-import AdList from './components/layouts/AdList';
-
 import { Switch, Route } from 'react-router-dom';
 import Home from './components/pages/Home';
 import Shop from './components/pages/Shop';
@@ -25,6 +21,9 @@ class App extends Component {
           <Route path="/shop" component={Shop} />
           <Route path="/mypage" component={Mypage} />
         </Switch>
+
+
+        
 <Navbar />
       </div>
     )
