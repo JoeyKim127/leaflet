@@ -8,26 +8,24 @@ import TotalPoints from './components/layouts/TotalPoints';
 import CurrentLocation from './components/layouts/CurrentLocation';
 import AdList from './components/layouts/AdList';
 
+import { Switch, Route } from 'react-router-dom';
+import Home from './components/pages/Home';
+import Shop from './components/pages/Shop';
+import Mypage from './components/pages/Mypage';
+
 class App extends Component {
   render() {
     return (
 
-      <div className="container">
+      <div >
 
-     
-      
-        <div className="header">
-          <TotalPoints />
-        </div>
-        <div className="body">
-          <CurrentLocation />
-          <AdList />
-        </div>
-
-         <div className="nav">
-          <Navbar />
-      </div>
-      
+        
+        <Switch>
+          <Route path="/home" component={Home} />
+          <Route path="/shop" component={Shop} />
+          <Route path="/mypage" component={Mypage} />
+        </Switch>
+<Navbar />
       </div>
     )
   };
