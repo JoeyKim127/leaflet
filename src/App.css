@@ -1,3 +1,10 @@
 /* style for entire app and child component 
 it contains default styles*/
 
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-toggler {
+    border: none;
+}
